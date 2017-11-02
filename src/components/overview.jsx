@@ -77,6 +77,7 @@ class Overview extends React.Component {
 export default Overview;
 
 Overview.propTypes = {
+  collapsableCode: React.PropTypes.bool,
   markdown: React.PropTypes.string,
   playgroundtheme: React.PropTypes.string,
   customRenderers: React.PropTypes.object,

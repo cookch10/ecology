@@ -17,6 +17,7 @@ export default class Ecology extends React.Component {
 
   render() {
     const {
+      collapsableCode,
       copyToClipboard,
       customRenderers,
       exportGist,
@@ -30,6 +31,7 @@ export default class Ecology extends React.Component {
       <div className="Ecology">
         <div className="Overview">
           <Overview
+            collapsableCode={collapsableCode}
             copyToClipboard={copyToClipboard}
             customRenderers={customRenderers}
             exportGist={exportGist}
@@ -51,6 +53,7 @@ Ecology.defaultProps = {
 };
 
 Ecology.propTypes = {
+  collapsableCode: PropTypes.bool,
   copyToClipboard: PropTypes.bool,
   customRenderers: PropTypes.object,
   exportGist: PropTypes.bool,

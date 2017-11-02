@@ -12,6 +12,7 @@ class Docs extends React.Component {
     return (
       <div className="demo">
         <Ecology
+          collapsableCode={true}
           exportGist={true}
           copyToClipboard={true}
           overview={require("!!raw!./ecology.md")}

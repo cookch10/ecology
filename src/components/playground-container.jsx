@@ -31,11 +31,12 @@ export default class PlaygroundContainer extends React.Component {
   }
 
   render() {
-    const { scope, source, noRender, playgroundtheme } = this.props;
+    const { collapsableCode, scope, source, noRender, playgroundtheme } = this.props;
     return (
       <div className="Interactive">
         {this.renderToolbar()}
         <Playground
+          collapsableCode={collapsableCode}
           codeText={source}
           scope={scope}
           noRender={noRender}
@@ -46,6 +47,7 @@ export default class PlaygroundContainer extends React.Component {
 }
 
 PlaygroundContainer.propTypes = {
+  collapsableCode: React.PropTypes.bool,
   source: React.PropTypes.string,
   noRender: React.PropTypes.bool,
   playgroundtheme: React.PropTypes.string,
